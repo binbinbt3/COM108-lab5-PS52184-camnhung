@@ -8,7 +8,7 @@
 
 ### Lần 1: Bài 1
 - Trạng thái: Chờ chấm
-- Ghi chú: 
+- Ghi chú: thay huong dan vibe code
 
 ### Lần 2: Bài 1
 - Trạng thái: 

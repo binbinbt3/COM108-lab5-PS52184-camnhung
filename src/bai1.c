@@ -43,4 +43,3 @@ float tinhTienDien(float kwh, float donGia) {
 
   return kwh * donGia;
 }
-

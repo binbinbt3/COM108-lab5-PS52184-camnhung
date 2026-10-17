@@ -34,6 +34,17 @@ int main() {
 int thanhToanHoaDon(float *soDuVi, float tongTien, float tyLeHoan, float *tienHoan) {
     // TODO: Viết code thanh toán và cập nhật số dư, tiền hoàn (dùng con trỏ)
     // Trả về 1 nếu thành công, 0 nếu thất bại (không đủ tiền)
-    
+    //Nghiệp vụ giao dịch: Nhận số dư ví, số tiền hóa đơn, tỷ lệ hoàn tiền.
+    //Nếu soDu < tongTien: Thất bại, trả về 0. Tiền hoàn = 0.
+    //Nếu đủ điều kiện: Trừ hóa đơn, cộng tiền cashback vào ví. Trả về 1.
+    if(*soDuVi < tongTien) {
+        *tienHoan = 0.0f;
+        return 0; // Thất bại
+    } else {
+        *soDuVi -= tongTien; // Trừ tiền hóa đơn
+        *tienHoan = (tyLeHoan / 100.0f) * tongTien; // Tính tiền hoàn
+        *soDuVi += *tienHoan; // Cộng tiền hoàn vào ví
+        return 1; // Thành công
+    }
     return 0;
 }
